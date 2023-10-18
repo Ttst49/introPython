@@ -1,10 +1,11 @@
+import random
 import words
 
 
 def test_number():
-    chosen_word = int(input("Choose a nummer between 1 and " + str(len(words.word_list))))
+    chosen_word = int(random.randint(1, len(words.word_list)))
 
-    if chosen_word not in [1, 2, 3, 4]:
+    if 1 < chosen_word > 4:
         print("Donnez un nombre valide")
         test_number()
     else:
